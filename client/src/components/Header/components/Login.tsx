@@ -30,7 +30,7 @@ const Login = ({
 }: LoginProps): JSX.Element => {
   const { t } = useTranslation();
 
-  const href = isSignedIn ? `${homeLocation}/learn` : `${apiLocation}/signin`;
+  const href = isSignedIn ? `${homeLocation}/learn` : `${apiLocation}signin`;
   return (
     <Button
       bsStyle='default'
