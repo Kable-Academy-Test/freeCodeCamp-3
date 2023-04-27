@@ -118,7 +118,7 @@ const directoryToSuperblock = {
   '10-coding-interview-prep': 'coding-interview-prep',
   '11-machine-learning-with-python': 'machine-learning-with-python',
   '13-relational-databases': 'relational-database',
-  '14-responsive-web-design-22': '2022/responsive-web-design',
+  // '14-responsive-web-design-22': '2022/responsive-web-design',
   '15-javascript-algorithms-and-data-structures-22':
     '2022/javascript-algorithms-and-data-structures'
 };

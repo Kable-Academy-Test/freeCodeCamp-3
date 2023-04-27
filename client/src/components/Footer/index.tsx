@@ -11,20 +11,20 @@ function Footer(): JSX.Element {
       <div className='footer-container'>
         <div className='footer-top'>
           <div className='footer-desc-col'>
-            <p>{t('footer.tax-exempt-status')}</p>
+            {/* <p>{t('footer.tax-exempt-status')}</p>
             <p>{t('footer.mission-statement')}</p>
-            <p>{t('footer.donation-initiatives')}</p>
+            <p>{t('footer.donation-initiatives')}</p> */}
             <p className='footer-donation'>
-              <Trans i18nKey='footer.donate-text'>
+              {/* <Trans i18nKey='footer.donate-text'>
                 You can
                 <Link className='inline' to='/donate'>
                   make a tax-deductible donation here
                 </Link>
                 .
-              </Trans>
+              </Trans> */}
             </p>
           </div>
-          <div className='trending-guides'>
+          {/* <div className='trending-guides'>
             <h2 className='col-header'>{t('footer.trending-guides')}</h2>
             <div className='trending-guides-row'>
               <div className='footer-col footer-col-1'>
@@ -129,9 +129,9 @@ function Footer(): JSX.Element {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className='footer-bottom'>
+        {/* <div className='footer-bottom'>
           <h2 className='col-header'>{t('footer.our-nonprofit')}</h2>
           <div className='footer-divder' />
           <div className='our-nonprofit'>
@@ -177,7 +177,7 @@ function Footer(): JSX.Element {
               {t('footer.links.copyright')}
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

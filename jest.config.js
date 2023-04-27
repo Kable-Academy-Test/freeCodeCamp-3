@@ -21,5 +21,5 @@ module.exports = {
   roots: ['.', './client', './api-server'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   setupFilesAfterEnv: ['./jest.setup.js'],
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jest'
 };

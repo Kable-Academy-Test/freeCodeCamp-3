@@ -137,19 +137,19 @@ describe("'superBlockOrder' helper functions", () => {
       showUpcomingChanges: 'true'
     });
     const test = [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
       SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy,
-      SuperBlocks.CodingInterviewPrep,
-      SuperBlocks.JsAlgoDataStructNew,
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy,
+      // SuperBlocks.CodingInterviewPrep,
+      // SuperBlocks.JsAlgoDataStructNew,
       SuperBlocks.RespWebDesign
     ];
     expect(learnSuperBlocks).toStrictEqual(test);
@@ -177,19 +177,19 @@ describe("'superBlockOrder' helper functions", () => {
       showNewCurriculum: 'true',
       showUpcomingChanges: 'true'
     });
-    const test = [
-      SuperBlocks.RespWebDesignNew,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy,
-      SuperBlocks.CodingInterviewPrep,
-      SuperBlocks.JsAlgoDataStructNew
-    ];
+    // const test = [
+    //   // SuperBlocks.RespWebDesignNew,
+    //   // SuperBlocks.DataVis,
+    //   // SuperBlocks.RelationalDb,
+    //   // SuperBlocks.BackEndDevApis,
+    //   // SuperBlocks.QualityAssurance,
+    //   // SuperBlocks.SciCompPy,
+    //   // SuperBlocks.DataAnalysisPy,
+    //   // SuperBlocks.InfoSec,
+    //   // SuperBlocks.MachineLearningPy,
+    //   // SuperBlocks.CodingInterviewPrep,
+    //   // SuperBlocks.JsAlgoDataStructNew
+    // ];
     expect(notAuditedSuperBlocks).toStrictEqual(test);
     expect(notAuditedSuperBlocks.length).toEqual(test.length);
   });

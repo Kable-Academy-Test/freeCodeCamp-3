@@ -3,9 +3,9 @@
 // @ts-nocheck
 import {
   faCheckSquare,
-  faHeart,
-  faSquare,
-  faExternalLinkAlt
+  // faHeart,
+  faSquare
+  // faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component, Fragment, createRef } from 'react';
@@ -28,11 +28,11 @@ import { User } from '../../../redux/prop-types';
 
 interface NavigationLocationApi {
   clientLocale: string;
-  radioLocation: string;
+  // radioLocation: string;
   apiLocation: string;
 }
-
-const { clientLocale, radioLocation } = envData as NavigationLocationApi;
+// radioLocation goes into curly braces below
+const { clientLocale } = envData as NavigationLocationApi;
 
 const locales = availableLangs.client.filter(
   lang => !hiddenLangs.includes(lang)
@@ -296,7 +296,7 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
       fetchState,
       t,
       toggleNightMode,
-      user: { isDonating = false, username, theme }
+      user: { username, theme }
     }: NavLinksProps = this.props;
 
     const { pending } = fetchState;
@@ -310,7 +310,7 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
           isLanguageMenuDisplayed ? ' display-lang-menu' : ''
         }`}
       >
-        {isDonating ? (
+        {/* {isDonating ? (
           <li key='donate'>
             <div className='nav-link nav-link-flex nav-link-header'>
               <span>{t('donate.thanks')}</span>
@@ -319,16 +319,16 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
           </li>
         ) : (
           <li key='donate'>
-            <Link
+            {/* <Link
               className='nav-link'
               onKeyDown={this.handleMenuKeyDown}
               sameTab={false}
               to='/donate'
             >
               {t('buttons.donate')}
-            </Link>
+            </Link> }
           </li>
-        )}
+        )} */}
         <li key='learn'>
           <Link
             className='nav-link'
@@ -340,7 +340,7 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
         </li>
         {username && (
           <Fragment key='profile-settings'>
-            <li key='profile'>
+            {/* <li key='profile'>
               <Link
                 className='nav-link'
                 onKeyDown={this.handleMenuKeyDown}
@@ -349,7 +349,7 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
               >
                 {t('buttons.profile')}
               </Link>
-            </li>
+            </li> */}
             <li key='settings'>
               <Link
                 className='nav-link'
@@ -362,7 +362,7 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
             </li>
           </Fragment>
         )}
-        <li key='forum' className='nav-line'>
+        {/* <li key='forum' className='nav-line'>
           <Link
             className='nav-link nav-link-flex'
             external={true}
@@ -397,7 +397,7 @@ export class NavLinks extends Component<NavLinksProps, NavlinkStates> {
             <span>{t('buttons.radio')}</span>
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </Link>
-        </li>
+        </li> */}
         <li className='nav-line' key='theme'>
           <button
             {...(!username && { 'aria-describedby': 'theme-sign-in' })}

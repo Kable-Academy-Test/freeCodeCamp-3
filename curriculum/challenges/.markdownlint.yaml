@@ -1,3 +1,4 @@
+
 default: true  # include all rules, with exceptions below
 MD002: false   # first heading should not be a top level heading
 MD013: false   # lines can be any length

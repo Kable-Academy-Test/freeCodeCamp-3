@@ -55,7 +55,7 @@ type SuperBlockOrder = {
 };
 
 // all languages should have this many, one for each current cert
-export const numberOfSuperBlocksOnLanding = 11;
+export const numberOfSuperBlocksOnLanding = 10;
 
 /*
  * This is the used for tests to make sure a superBlock isn't out of order
@@ -65,20 +65,9 @@ export const numberOfSuperBlocksOnLanding = 11;
  * to be in this order
  */
 export const defaultSuperBlockOrder: SuperBlocks[] = [
-  SuperBlocks.RespWebDesignNew,
   SuperBlocks.RespWebDesign,
-  SuperBlocks.JsAlgoDataStructNew,
   SuperBlocks.JsAlgoDataStruct,
-  SuperBlocks.FrontEndDevLibs,
-  SuperBlocks.DataVis,
-  SuperBlocks.RelationalDb,
-  SuperBlocks.BackEndDevApis,
-  SuperBlocks.QualityAssurance,
-  SuperBlocks.SciCompPy,
-  SuperBlocks.DataAnalysisPy,
-  SuperBlocks.InfoSec,
-  SuperBlocks.MachineLearningPy,
-  SuperBlocks.CodingInterviewPrep
+  SuperBlocks.FrontEndDevLibs
 ];
 
 /*
@@ -95,37 +84,39 @@ export const defaultSuperBlockOrder: SuperBlocks[] = [
 export const superBlockOrder: SuperBlockOrder = {
   [Languages.English]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
+      SuperBlocks.RespWebDesign,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
+          SuperBlocks.RespWebDesign,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
+          //
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
-        [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
+        [SuperBlockStates.Upcoming]: [],
+        [SuperBlockStates.Legacy]: []
       },
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [],
@@ -137,29 +128,29 @@ export const superBlockOrder: SuperBlockOrder = {
   },
   [Languages.Espanol]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      SuperBlocks.RespWebDesign,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
@@ -167,44 +158,43 @@ export const superBlockOrder: SuperBlockOrder = {
       },
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RelationalDb,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.Chinese]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
@@ -212,42 +202,41 @@ export const superBlockOrder: SuperBlockOrder = {
       },
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RelationalDb,
-          SuperBlocks.CodingInterviewPrep
+          // SuperBlocks.RelationalDb,
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.ChineseTrandational]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
@@ -255,44 +244,43 @@ export const superBlockOrder: SuperBlockOrder = {
       },
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RelationalDb,
-          SuperBlocks.CodingInterviewPrep
+          // SuperBlocks.RelationalDb,
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.Italian]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
+          //
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
@@ -301,40 +289,40 @@ export const superBlockOrder: SuperBlockOrder = {
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.Portuguese]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
+          //
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
@@ -343,82 +331,82 @@ export const superBlockOrder: SuperBlockOrder = {
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.Ukrainian]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [SuperBlocks.CodingInterviewPrep],
+        [SuperBlockStates.Current]: [],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.Japanese]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.RespWebDesign,
           SuperBlocks.JsAlgoDataStruct,
-          SuperBlocks.FrontEndDevLibs,
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.FrontEndDevLibs
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
+          //
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
@@ -427,7 +415,7 @@ export const superBlockOrder: SuperBlockOrder = {
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -436,15 +424,15 @@ export const superBlockOrder: SuperBlockOrder = {
     [CurriculumMaps.Landing]: [
       SuperBlocks.RespWebDesign,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -459,41 +447,41 @@ export const superBlockOrder: SuperBlockOrder = {
       },
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          // SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
+          //
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
   [Languages.Arabic]: {
     [CurriculumMaps.Landing]: [
-      SuperBlocks.RespWebDesignNew,
+      // SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
-      SuperBlocks.FrontEndDevLibs,
-      SuperBlocks.DataVis,
-      SuperBlocks.RelationalDb,
-      SuperBlocks.BackEndDevApis,
-      SuperBlocks.QualityAssurance,
-      SuperBlocks.SciCompPy,
-      SuperBlocks.DataAnalysisPy,
-      SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.FrontEndDevLibs
+      // SuperBlocks.DataVis,
+      // SuperBlocks.RelationalDb,
+      // SuperBlocks.BackEndDevApis,
+      // SuperBlocks.QualityAssurance,
+      // SuperBlocks.SciCompPy,
+      // SuperBlocks.DataAnalysisPy,
+      // SuperBlocks.InfoSec,
+      // SuperBlocks.MachineLearningPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.RespWebDesignNew,
+          // SuperBlocks.RespWebDesignNew,
           SuperBlocks.JsAlgoDataStruct,
           SuperBlocks.FrontEndDevLibs
         ],
@@ -503,18 +491,18 @@ export const superBlockOrder: SuperBlockOrder = {
       },
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
-          SuperBlocks.DataVis,
-          SuperBlocks.RelationalDb,
-          SuperBlocks.BackEndDevApis,
-          SuperBlocks.QualityAssurance,
-          SuperBlocks.SciCompPy,
-          SuperBlocks.DataAnalysisPy,
-          SuperBlocks.InfoSec,
-          SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          // SuperBlocks.DataVis,
+          // SuperBlocks.RelationalDb,
+          // SuperBlocks.BackEndDevApis,
+          // SuperBlocks.QualityAssurance,
+          // SuperBlocks.SciCompPy,
+          // SuperBlocks.DataAnalysisPy,
+          // SuperBlocks.InfoSec,
+          // SuperBlocks.MachineLearningPy,
+          //
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       }
     }

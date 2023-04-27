@@ -59,11 +59,12 @@ export const UniversalNav = ({
       id='universal-nav'
     >
       <div
+        style={{ opacity: 0.0 }}
         className={`universal-nav-left${displayMenu ? ' display-search' : ''}`}
       >
         <Media minWidth={MAX_MOBILE_WIDTH + 1}>{search}</Media>
       </div>
-      <div className='universal-nav-middle'>
+      <div className='universal-nav-middle text-center'>
         <Link id='universal-nav-logo' to='/learn'>
           <NavLogo />
         </Link>

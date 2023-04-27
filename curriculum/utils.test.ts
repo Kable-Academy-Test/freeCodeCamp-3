@@ -29,7 +29,7 @@ const upcomingTest = {
   [SuperBlocks.RespWebDesignNew]: 0,
   [SuperBlocks.JsAlgoDataStruct]: 1,
   [SuperBlocks.FrontEndDevLibs]: 2,
-  [SuperBlocks.DataVis]: 3,
+  // [SuperBlocks.DataVis]: 3,
   [SuperBlocks.RelationalDb]: 4,
   [SuperBlocks.BackEndDevApis]: 5,
   [SuperBlocks.QualityAssurance]: 6,

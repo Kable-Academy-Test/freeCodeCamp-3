@@ -2,15 +2,15 @@ import { Col, Row } from '@freecodecamp/react-bootstrap';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import envData from '../../../../../config/env.json';
-import {
-  AmazonLogo,
-  AppleLogo,
-  MicrosoftLogo,
-  SpotifyLogo,
-  GoogleLogo,
-  TencentLogo,
-  AlibabaLogo
-} from '../../../assets/images/components';
+// import {
+//   AmazonLogo,
+//   AppleLogo,
+//   MicrosoftLogo,
+//   SpotifyLogo,
+//   GoogleLogo,
+//   TencentLogo,
+//   AlibabaLogo
+// } from '../../../assets/images/components';
 import { Spacer } from '../../helpers';
 import BigCallToAction from './big-call-to-action';
 import CampersImage from './campers-image';
@@ -19,12 +19,12 @@ interface LandingTopProps {
   pageName: string;
 }
 
-const { clientLocale } = envData;
+// const { clientLocale } = envData;
 function LandingTop({ pageName }: LandingTopProps): JSX.Element {
   const { t } = useTranslation();
-  const showChineseLogos = ['chinese', 'chinese-tradition'].includes(
-    clientLocale
-  );
+  // const showChineseLogos = ['chinese', 'chinese-tradition'].includes(
+  //   clientLocale
+  // );
   return (
     <div className='landing-top'>
       <Row>
@@ -35,8 +35,8 @@ function LandingTop({ pageName }: LandingTopProps): JSX.Element {
           </h1>
           <p className='big-heading'>{t('landing.big-heading-2')}</p>
           <p className='big-heading'>{t('landing.big-heading-3')}</p>
-          <p>{t('landing.h2-heading')}</p>
-          <div className='logo-row'>
+          {/* <p>{t('landing.h2-heading')}</p> */}
+          {/* <div className='logo-row'>
             <AppleLogo />
             <GoogleLogo />
             <MicrosoftLogo />
@@ -51,7 +51,7 @@ function LandingTop({ pageName }: LandingTopProps): JSX.Element {
                 <AmazonLogo />
               </>
             )}
-          </div>
+          </div> */}
           <Spacer />
           <BigCallToAction pageName={pageName} />
           <CampersImage pageName={pageName} />

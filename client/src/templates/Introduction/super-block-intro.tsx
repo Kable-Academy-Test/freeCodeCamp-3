@@ -26,7 +26,7 @@ import {
 } from '../../redux/selectors';
 import { MarkdownRemark, AllChallengeNode, User } from '../../redux/prop-types';
 import Block from './components/block';
-import CertChallenge from './components/cert-challenge';
+// import CertChallenge from './components/cert-challenge';
 import LegacyLinks from './components/legacy-links';
 import SuperBlockIntro from './components/super-block-intro';
 import { resetExpansion, toggleBlock } from './redux';
@@ -184,14 +184,14 @@ const SuperBlockIntroductionPage = (props: SuperBlockProp) => {
   return (
     <>
       <Helmet>
-        <title>{i18nTitle} | freeCodeCamp.org</title>
+        <title>{i18nTitle} | Kable Academy</title>
       </Helmet>
       <Grid>
         <main>
           <Row className='super-block-intro-page'>
             <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}>
               <Spacer size={2} />
-              <LegacyLinks superBlock={superBlock} />
+              {/* <LegacyLinks superBlock={superBlock} /> */}
               <SuperBlockIntro superBlock={superBlock} />
               <Spacer size={2} />
               <h2 className='text-center big-subheading'>
@@ -212,12 +212,12 @@ const SuperBlockIntroductionPage = (props: SuperBlockProp) => {
                 ))}
                 {superBlock !== SuperBlocks.CodingInterviewPrep && (
                   <div>
-                    <CertChallenge
+                    {/* <CertChallenge
                       certification={certification}
                       superBlock={superBlock}
                       title={title}
                       user={user}
-                    />
+                    /> */}
                   </div>
                 )}
               </div>
@@ -228,14 +228,14 @@ const SuperBlockIntroductionPage = (props: SuperBlockProp) => {
                 </div>
               )}
               <Spacer size={2} />
-              <h3
+              {/* <h3
                 className='text-center big-block-title'
                 style={{ whiteSpace: 'pre-line' }}
               >
                 {t(`intro:misc-text.browse-other`)}
-              </h3>
+              </h3> */}
               <Spacer />
-              <Map currentSuperBlock={superBlock} />
+              {/* <Map currentSuperBlock={superBlock} /> */}
               <Spacer size={2} />
             </Col>
           </Row>

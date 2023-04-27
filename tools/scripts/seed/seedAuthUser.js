@@ -146,77 +146,81 @@ const blankUser = {
   emailVerifyTTL: null
 };
 
-MongoClient.connect(MONGOHQ_URL, { useNewUrlParser: true }, (err, client) => {
-  handleError(err, client);
+MongoClient.connect(
+  MONGOHQ_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  (err, client) => {
+    handleError(err, client);
 
-  log('Connected successfully to mongo');
+    log('Connected successfully to mongo');
 
-  const db = client.db('freecodecamp');
-  const user = db.collection('user');
+    const db = client.db('freecodecamp');
+    const user = db.collection('user');
 
-  const dropUserTokens = async function () {
-    await db.collection('UserToken').deleteMany({
-      userId: {
-        $in: [
-          ObjectId('5fa2db00a25c1c1fa49ce067'),
-          ObjectId('5bd30e0f1caf6ac3ddddddb5'),
-          ObjectId('5bd30e0f1caf6ac3ddddddb9')
-        ]
-      }
-    });
-  };
-
-  if (process.argv[2] === 'certUser') {
-    dropUserTokens();
-    user.deleteMany(
-      {
-        _id: {
+    const dropUserTokens = async function () {
+      await db.collection('UserToken').deleteMany({
+        userId: {
           $in: [
             ObjectId('5fa2db00a25c1c1fa49ce067'),
             ObjectId('5bd30e0f1caf6ac3ddddddb5'),
             ObjectId('5bd30e0f1caf6ac3ddddddb9')
           ]
         }
-      },
-      err => {
-        handleError(err, client);
+      });
+    };
 
-        try {
-          user.insertOne(fullyCertifiedUser);
-          user.insertOne(blankUser);
-        } catch (e) {
-          handleError(e, client);
-        } finally {
-          log('local auth user seed complete');
-          client.close();
-        }
-      }
-    );
-  } else {
-    dropUserTokens();
-    user.deleteMany(
-      {
-        _id: {
-          $in: [
-            ObjectId('5fa2db00a25c1c1fa49ce067'),
-            ObjectId('5bd30e0f1caf6ac3ddddddb5'),
-            ObjectId('5bd30e0f1caf6ac3ddddddb9')
-          ]
-        }
-      },
-      err => {
-        handleError(err, client);
+    if (process.argv[2] === 'certUser') {
+      dropUserTokens();
+      user.deleteMany(
+        {
+          _id: {
+            $in: [
+              ObjectId('5fa2db00a25c1c1fa49ce067'),
+              ObjectId('5bd30e0f1caf6ac3ddddddb5'),
+              ObjectId('5bd30e0f1caf6ac3ddddddb9')
+            ]
+          }
+        },
+        err => {
+          handleError(err, client);
 
-        try {
-          user.insertOne(authUser);
-          user.insertOne(blankUser);
-        } catch (e) {
-          handleError(e, client);
-        } finally {
-          log('local auth user seed complete');
-          client.close();
+          try {
+            user.insertOne(fullyCertifiedUser);
+            user.insertOne(blankUser);
+          } catch (e) {
+            handleError(e, client);
+          } finally {
+            log('local auth user seed complete');
+            client.close();
+          }
         }
-      }
-    );
+      );
+    } else {
+      dropUserTokens();
+      user.deleteMany(
+        {
+          _id: {
+            $in: [
+              ObjectId('5fa2db00a25c1c1fa49ce067'),
+              ObjectId('5bd30e0f1caf6ac3ddddddb5'),
+              ObjectId('5bd30e0f1caf6ac3ddddddb9')
+            ]
+          }
+        },
+        err => {
+          handleError(err, client);
+
+          try {
+            user.insertOne(authUser);
+            user.insertOne(blankUser);
+          } catch (e) {
+            handleError(e, client);
+          } finally {
+            log('local auth user seed complete');
+            client.close();
+          }
+        }
+      );
+    }
   }
-});
+);
