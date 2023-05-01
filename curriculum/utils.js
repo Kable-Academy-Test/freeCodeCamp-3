@@ -74,7 +74,7 @@ function createSuperOrder({
       return showUpcomingChanges === 'true';
     return true;
   }
-
+// magic comment  
   function addSuperBlockStates(translationState) {
     orderedSuperBlockStates.forEach(state => {
       if (canAddToSuperOrder(state)) addToSuperOrder(translationState[state]);
