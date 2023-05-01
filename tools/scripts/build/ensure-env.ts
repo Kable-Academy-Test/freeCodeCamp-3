@@ -54,16 +54,16 @@ if (FREECODECAMP_NODE_ENV !== 'development') {
     'showNewCurriculum'
   ];
   const searchKeys = ['algoliaAppId', 'algoliaAPIKey'];
-  const donationKeys = [ 'paypalClientId', 'patreonClientId'];
+  // const donationKeys = [''];
   const loggingKeys = ['sentryClientDSN'];
-  const abTestingKeys = ['growthbookUri'];
+  // const abTestingKeys = ['growthbookUri'];
 
   const expectedVariables = locationKeys.concat(
     deploymentKeys,
     searchKeys,
-    donationKeys,
+    // donationKeys,
     loggingKeys,
-    abTestingKeys
+    // abTestingKeys
   );
   const actualVariables = Object.keys(env as Record<string, unknown>);
   if (expectedVariables.length !== actualVariables.length) {

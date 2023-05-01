@@ -32,7 +32,7 @@ const {
   SENTRY_CLIENT_DSN: sentryClientDSN,
   SHOW_UPCOMING_CHANGES: showUpcomingChanges,
   SHOW_NEW_CURRICULUM: showNewCurriculum,
-  GROWTHBOOK_URI: growthbookUri
+  // GROWTHBOOK_URI: growthbookUri
 } = process.env;
 
 const locations = {
@@ -67,8 +67,8 @@ module.exports = Object.assign(locations, {
       : sentryClientDSN,
   showUpcomingChanges: showUpcomingChanges === 'true',
   showNewCurriculum: showNewCurriculum === 'true',
-  growthbookUri:
-    !growthbookUri || growthbookUri === 'api_URI_from_Growthbook_dashboard'
-      ? null
-      : growthbookUri
+  // growthbookUri:
+  //   !growthbookUri || growthbookUri === 'api_URI_from_Growthbook_dashboard'
+  //     ? null
+  //     : growthbookUri
 });
