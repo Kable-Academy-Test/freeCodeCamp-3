@@ -54,7 +54,7 @@ if (FREECODECAMP_NODE_ENV !== 'development') {
     'showNewCurriculum'
   ];
   const searchKeys = ['algoliaAppId', 'algoliaAPIKey'];
-  const donationKeys = ['stripePublicKey', 'paypalClientId', 'patreonClientId'];
+  const donationKeys = [ 'paypalClientId', 'patreonClientId'];
   const loggingKeys = ['sentryClientDSN'];
   const abTestingKeys = ['growthbookUri'];
 

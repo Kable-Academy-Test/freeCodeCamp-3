@@ -27,9 +27,7 @@ const {
   SHOW_LOCALE_DROPDOWN_MENU: showLocaleDropdownMenu,
   ALGOLIA_APP_ID: algoliaAppId,
   ALGOLIA_API_KEY: algoliaAPIKey,
-  STRIPE_PUBLIC_KEY: stripePublicKey,
-  PAYPAL_CLIENT_ID: paypalClientId,
-  PATREON_CLIENT_ID: patreonClientId,
+ 
   DEPLOYMENT_ENV: deploymentEnv,
   SENTRY_CLIENT_DSN: sentryClientDSN,
   SHOW_UPCOMING_CHANGES: showUpcomingChanges,
@@ -61,18 +59,8 @@ module.exports = Object.assign(locations, {
     !algoliaAPIKey || algoliaAPIKey === 'api_key_from_algolia_dashboard'
       ? ''
       : algoliaAPIKey,
-  stripePublicKey:
-    !stripePublicKey || stripePublicKey === 'pk_from_stripe_dashboard'
-      ? null
-      : stripePublicKey,
-  paypalClientId:
-    !paypalClientId || paypalClientId === 'id_from_paypal_dashboard'
-      ? null
-      : paypalClientId,
-  patreonClientId:
-    !patreonClientId || patreonClientId === 'id_from_patreon_dashboard'
-      ? null
-      : patreonClientId,
+
+ 
   sentryClientDSN:
     !sentryClientDSN || sentryClientDSN === 'dsn_from_sentry_dashboard'
       ? null
