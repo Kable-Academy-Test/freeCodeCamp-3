@@ -177,7 +177,7 @@ export function getUserProfile(
   username: string
 ): Promise<ResponseWithData<UserProfileResponse>> {
   const responseWithData = get<{ entities?: ApiUser; result?: string }>(
-    `/api/users/get-public-profile?username=${username}`
+    `api/users/get-public-profile?username=${username}`
   );
   return responseWithData.then(({ response, data }) => {
     const { result, user } = parseApiResponseToClientUser({
